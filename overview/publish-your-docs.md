@@ -1,8 +1,8 @@
 ---
-icon: globe-pointer
+icon: memory
 ---
 
-# Publish your docs
+# Architecture
 
 Once you’ve finished writing, editing, or importing your content, you can publish your work to the web as a docs site. Once published, your site will be accessible online only to your selected audience.
 
