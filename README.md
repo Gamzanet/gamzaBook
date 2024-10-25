@@ -20,9 +20,37 @@ layout:
 
 # Welcome
 
-Welcome to the GitBook Starter Template! Here you'll get an overview of all the amazing features GitBook offers to help you build beautiful, interactive documentation.
+Upside Academy의 팀 프로젝트 UniSwap V4 Hook의 정적, 동적 분석을 진행해주는 솔루션인 Herbicide을 제작했습니다.&#x20;
 
-You'll see some of the best parts of GitBook in action — and find help on how you can turn this template into your own.
+본 문서는 Herbicide에 대한 Architecture, 기능 구성, 로드맵 등 프로젝트에 대한 내용을 기술합니다.
+
+
+
+### Members
+
+Entropy
+
+Mia
+
+Kenny
+
+Sori
+
+### thanks to.
+
+Dunamu
+
+Theori
+
+Zer0Luck at Theori
+
+
+
+
+
+
+
+
 
 ### Jump right in
 
