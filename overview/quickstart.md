@@ -4,9 +4,31 @@ icon: bullseye-arrow
 
 # Introduction
 
-<figure><img src="https://gitbookio.github.io/onboarding-template-images/quickstart-hero.png" alt=""><figcaption></figcaption></figure>
+Uniswap V4에서 추가되는 주요기능 중 Hook이라는 기능은 유동성 추가, 제거, 토큰 교환, 유동성 기부 등의 동작 시 개발자가 동작 전 후로 비즈니스 로직을 적용할 수 있는 기능입니다.
 
-Beautiful documentation starts with the content you create — and GitBook makes it easy to get started with any pre-existing content.
+Uniswap V4는 유동성을 PoolKey를 기준으로 관리하고 PoolKey에는 교환될 토큰의 주소 2개, 수수료, 틱의 간격, 구현된 Hook Contract의 주소가 포함됩니다.
+
+저희 프로젝트에서는 Uniswap V4를 분석하여 Hook이 적용된 유동성을 이용할 때 발생할 수 있는 위협을 정의하고 분석하는 솔루션을 제작하였습니다.
+
+해당 솔루션은 이용자가 Hook Contract를 작성해 Uni Chain에 배포한 뒤 유동성 풀에 해당하는 PoolKey를 입력하면 해당 Hook Contract를 동적과 정적으로 각각 분석해 발생 가능한 위협을 보여주는 역할을 합니다.
+
+동적의 경우 총 N개의 범주에서 M개의 테스트가 진행되고 정적의 경우 N개의 범주에서 M개의 테스트가 진행한 뒤 결과를 판단해 출력합니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure><img src="https://gitbookio.github.io/onboarding-template-images/quickstart-hero.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 Want to learn about writing content from scratch? Head to the [Basics](https://github.com/GitbookIO/onboarding-template/blob/main/getting-started/broken-reference/README.md) section to learn more.
