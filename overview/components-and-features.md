@@ -8,7 +8,7 @@ Herbicide는 Uniswap V4의 PoolKey를 입력으로 주어야 동작합니다.
 
 분석을 요구하는 Hook Contract를 Uni Chain Sepolia Network(Chain ID : 1301)에 배포되어야 하고, Uni Chain의 Uniswap V4 Pool Manager Contract에 Initialize 할 것을 권장합니다.
 
-정적 분석은 [UniChain Blockscout](https://unichain-sepolia.blockscout.com/)Contract가 verify되어 소스코드가 업로드되어야 합니다.
+정적 분석은 [UniChain Blockscout](https://unichain-sepolia.blockscout.com/) Contract가 verify되어 소스코드가 업로드되어야 합니다.
 
 
 
