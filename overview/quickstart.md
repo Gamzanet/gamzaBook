@@ -14,7 +14,9 @@ Uniswap V4는 유동성을 PoolKey를 기준으로 관리하고 PoolKey에는 �
 
 동적의 경우 총 N개의 범주에서 M개의 테스트가 진행되고 정적의 경우 N개의 범주에서 M개의 테스트가 진행한 뒤 결과를 판단해 출력합니다.
 
+Uniswap에서도 infinite hackathon, retro program 등의 활동을 통해서 Uni Chain 및 Blockchain 생태계에 대해 발전을 위해 많은 노력을 기울이고 있습니다.
 
+우리는 Uniswap V4 이용자, Uniswap V4의 Hook 개발자가 보다 안전한 Hook Contract를 개발에 도움을 주는 것을 목표로 하고 있습니다.
 
 
 
