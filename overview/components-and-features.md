@@ -12,7 +12,9 @@ Herbicide는 Uniswap V4의 PoolKey를 입력으로 주어야 동작합니다.
 
 
 
-정적분석의 경우 [Semgrep](https://semgrep.dev)과 [Slither](https://github.com/crytic/slither)를 기반으로 동작합니다.
+정적분석은 [Semgrep](https://semgrep.dev)과 [Slither](https://github.com/crytic/slither)를 기반으로 동적분석은 [Foundry](https://book.getfoundry.sh/) 기반으로 동작합니다.
+
+Uniswap V4 Hook에서 발생할 수 있는 위협들은 [Uniswap V4 Hook Securit](https://gamza-net.gitbook.io/gamza.net/learn-internal-researcher/uniswap-v4-hook-security)기재했습니다.기재했습니다기재했습니다.
 
 
 
