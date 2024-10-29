@@ -36,6 +36,10 @@ gas griefing의 위험을 gas 사용량을 통해 확인할 수 있고, 사용�
 
 Herbicide가 Simulation한 Price와 실제 이루어질 Swap에 대한 Price의 차이가 클 경우 경고합니다.
 
+#### Proxy Detection
+
+Hook Contract가 Proxy로 구현되어있는 경우, 이를 탐지하여 경고합니다.
+
 
 
 
