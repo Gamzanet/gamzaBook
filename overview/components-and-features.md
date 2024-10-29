@@ -42,19 +42,27 @@ Hook Contract Scanner는 개발자가 작성한 Hook Contract에 대한 Librarie
 
 * &#x20;Modifiers
 
-
+output
 
 * &#x20;Access Control Logic
+
+output
+
+
+
+* Double Initializability
+
+output
 
 
 
 * &#x20;If-nested Condition
 
+output
 
+* &#x20;Hook State Variable Information
 
-* &#x20;Hook&#x20;
-
-
+output
 
 
 
