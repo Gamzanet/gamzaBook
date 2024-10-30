@@ -54,6 +54,42 @@ Herbicide에서는 아래의 Printer를 자동으로 실행하여, 정보를 추
 
 
 
+## Semgrep Solidity + Python
+
+Simple Contract Analyzer에서, 사용자가 Solidity Contract 코드를 입력하면 Herbicide에서 미리 정의한 Semgrep 규칙에 따라, Contract 주요 정보를 가공하여 제공합니다. 이를 통해 사용자는 Contract에 선언된 Function, Storage Variable에 대한 정보를 편리하게 검토할 수 있습니다.
+
+### Threat Detection
+
+* `info-layer2-assignee`\
+  Checks storage re-used while double-initializing the hook.
+* `low-call`\
+  Checks if the hook is low-calling to other addresses.
+* `getSlot0-check`\
+  Checks if the hook is calling getSlot0 function, as it is dangerous if the hook operates as an oracle, returning the getSlot0 value as the price of the pool.
+* `missing-token-transfer-while-burnt`\
+  Checks if the hook is not transfering the underlying token while the token is burnt.
+* `missing-onlyPoolManager-modifier`\
+  Checks if onlyPoolManager modifier is not applied to the hook functions.
+* `misconfigured-hook`\
+  Checks if the hook functions are not yet implemented, while the function flag of `getHookPermissions` returns `true`.
+
+### Contract Information
+
+* `info-variable`\
+  Prints state variables and the functions using them.&#x20;
+* `info-inline-access-control`\
+  Checks require\&assert\&revert conditions.
+* `info-inheritance`\
+  Prints the contract's inheritance information.
+* `info-library`\
+  Prints the usage of libraries of the contract.
+
+
+
+
+
+
+
 
 
 
