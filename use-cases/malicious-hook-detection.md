@@ -196,5 +196,22 @@ The image above illustrates the process in which the Malicious Hook exploits the
 
 result
 
+### GasGriefHook
 
+hook은 poolkey의 동작에 매우 민감하게 관여할 수 있습니다. 예를들어, hook에서 `revert`가 수행된다면 해당 풀을 사용할 수 없는 풀이 되어버립니다. 이처럼 사용자의 가용성을 해치는 case는 대표적으로 gas griefing attack이 있습니다. herbicide는 이러한 훅들을 동적 분석 테스팅을 통해 탐지할 수 있습니다.
+
+```json
+{
+    "currency0": "0x0197481B0F5237eF312a78528e79667D8b33Dcff",
+    "currency1": "0xA56569Bd93dc4b9afCc871e251017dB0543920d4",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "hooks": "0x3c712B5E5B4a7ee97E4e3F2330bFb435050a4800",
+    "deployer": "0x4e59b44847b379578588920cA78FbF26c0B4956C"
+}
+```
+
+[Code Details](https://unichain-sepolia.blockscout.com/address/0x3c712B5E5B4a7ee97E4e3F2330bFb435050a4800?tab=contract)
+
+#### Result
 

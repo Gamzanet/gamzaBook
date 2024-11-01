@@ -36,7 +36,7 @@ Hook Contract를 입력하면 Herbicide Semgrep Script를 통해 Static Analysis
 
 1. onlyPoolManager : Checks if `onlyPoolManager` is implemented for hook function access control.
 2. Double Initialize Storage Check : Hook Initialize 시, `beforeInitialize`/`afterInitialize` 함수가 접근하는 Storage가 PoolId로 관리되고 있는지 확인합니다.
-3. tx.origin : Access Control을 tx.origin으로 수행할 경우 경고합니다.
+3. tx.origin : Access Control을 `tx.origin`으로 수행할 경우 경고합니다.
 
 
 
