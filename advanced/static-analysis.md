@@ -12,7 +12,6 @@ Using the Detectors provided by Slither, it is possible to detect threats within
   * #### Uninitialized state variables.
 * #### [`delegatecall-loop`](https://github.com/crytic/slither/wiki/Detector-Documentation#controlled-delegatecall)
   * #### `Delegatecall`  to an address controlled by the user.
-* #### [`delegatecall-loop`](https://github.com/crytic/slither/wiki/Detector-Documentation#payable-functions-using-delegatecall-inside-a-loop)
   * #### Detect the use of `delegatecall` inside a loop in a payable function.
 * #### [`msg-value-loop`](https://github.com/crytic/slither/wiki/Detector-Documentation#msgvalue-inside-a-loop)
   * #### Detect the use of `msg.value` inside a loop.
@@ -28,14 +27,14 @@ Using the Detectors provided by Slither, it is possible to detect threats within
 ## Informational Gathering
 
 Using the Slither-Printer, it displays critical information regarding the access control of the contract.\
-In Herbicide, the Printer is automatically executed to extract and display.
+In Herbicide, the Printer is automatically executed to extract and display.&#x20;
 
 * [**`require statements`**](https://github.com/crytic/slither/wiki/Printer-documentation#require)
-  * Printer require statements in the function.
+  * Prints require statements in the function.
 * [**`modifiers`**](https://github.com/crytic/slither/wiki/Printer-documentation#modifiers)
-  * Printer modify applied to the function.
+  * Prints modify applied to the function.
 * [**`state variables and authentication`**](https://github.com/crytic/slither/wiki/Printer-documentation#variables-written-and-authorization)
-  * Printer require statements with `msg.sender`, in the function which writes state variables.
+  * Prints require statements with `msg.sender`, in the function which writes state variables.
 
 #### Contract Information
 
@@ -48,7 +47,7 @@ In Herbicide, the Printer is automatically executed to extract and display.
 * `info-library`
   * Prints the usage of libraries of the contract.
 
-## Semgrep Solidity + Python
+## Semgrep-Solidity + Python
 
 In the Simple Contract Analyzer, users can input contract to receive processed key information according to predefined Semgrep rules by Herbicide. This lets users easily review details about functions and storage variables declared in
 
@@ -59,10 +58,10 @@ In the Simple Contract Analyzer, users can input contract to receive processed k
 * `low-call`
   * Checks if the hook is low-calling to other addresses.
 * `getSlot0-check`
-  * Checks if the hook is calling getSlot0 function, as it is dangerous if the hook operates as an oracle, returning the getSlot0 value as the price of the pool.
+  * Checks if the hook is calling `getSlot0` function, as it is dangerous if the hook operates as an oracle, returning the `getSlot0` value as the price of the pool.
 * `missing-token-transfer-while-burnt`
-  * Checks if the hook is not transfering the underlying token while the token is burnt.
+  * Checks if the hook is not transfer the underlying token while the token is burnt.
 * `missing-onlyPoolManager-modifier`
-  * Checks if onlyPoolManager modifier is not applied to the hook functions.
+  * Checks if `onlyPoolManager` modifier is not applied to the hook functions.
 * `misconfigured-hook`
   * Checks if the hook functions are not yet implemented, while the function flag of `getHookPermissions` returns `true`.
