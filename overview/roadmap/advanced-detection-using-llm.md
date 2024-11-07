@@ -1,7 +1,5 @@
 # Advanced Detection using LLM
 
-저희 프로젝트는 Uniswap V4 Hook Contract의 보안을 강화하기 위해, LLM을 이용한 고도화된 정적 분석 솔루션을 개발하고자 합니다. Hook Contract도 결국 Smart Contract의 일종이기에 개발자가 사용자 지정 함수 및 Yul 문법으로 작성하는 어셈블리 코드를 자유롭게 포함할 수 있으며, 이러한 유연성은 코드 구조의 복잡성을 증가시키고, 기존 정적 분석 도구로는 특정 패턴이나 동작을 포착하기 어려운 상황을 야기합니다.
+Our project seeks to enhance the security of Uniswap V4 Hook Contracts by developing an advanced static analysis solution leveraging LLMs. Since Hook Contracts are a type of Smart Contract, developers can freely include custom functions and assembly code written in Yul, which adds to code complexity and makes it challenging for conventional static analysis tools to detect specific patterns or behaviors effectively.
 
-이를 해결하고자, 저희는 LLM을 활용하여 정적 분석을 고도화하는 방법을 탐구하고 있습니다. LLM을 이용해 스마트 컨트랙트 코드의 패턴을 학습하고, 이를 통해 Hook 내 함수와 어셈블리 코드의 복잡한 구조를 심도 있게 이해할 수 있도록 하는 것이 이 로드맵의 핵심입니다. LLM을 학습시키면 Hook Contract의 특이점과 보안 취약점을 보다 효과적으로 인지하고 분석할 수 있으며, 코드 내 발생할 수 있는 의도하지 않은 동작이나 보안 결함을 사전에 포착할 수 있습니다.
-
-이러한 고도화된 분석은 단순히 코드의 형식적 오류 탐지에 그치지 않고, Hook Contract 내 숨겨진 위험성을 실질적으로 분석함으로써 더욱 안전한 Uni Chain의 De-fi 생태계를 지원하게 될 것입니다.
+We are exploring using LLMs to enhance static analysis and address these challenges. By training an LLM on smart contract code patterns, we aim to achieve a deep understanding of the complex structures within Hook functions and assembly code. This approach allows the LLM to recognize unique characteristics and potential vulnerabilities within Hook Contracts, enabling proactive identification of unintended behaviors or security flaws in the code. Such advanced analysis goes beyond merely detecting syntactic errors. It will offer a practical evaluation of hidden risks within Hook Contracts, contributing to a safer DeFi ecosystem on UniChain.

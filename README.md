@@ -1,6 +1,6 @@
 ---
 icon: hand-wave
-cover: https://gitbookio.github.io/onboarding-template-images/header.png
+cover: .gitbook/assets/master_page_m – Demo - 0.png
 coverY: 0
 layout:
   cover:
@@ -20,11 +20,9 @@ layout:
 
 # Welcome
 
-Upside Academy의 팀 프로젝트 UniSwap V4 Hook의 정적, 동적 분석을 진행해주는 솔루션인 Herbicide을 제작했습니다.&#x20;
+Herbicide is a mission-critical developer security platform to code, audit, deploy, monitor, and operate Uniswap v4 hook applications with confidence. Integrating directly into the developer workflow, Herbicide makes it easy and fast for developers and operators to prevent and fix security issues pre and post-deployment.
 
-본 문서는 Herbicide에 대한 Architecture, 기능 구성, 로드맵 등 프로젝트에 대한 내용을 기술합니다.
-
-
+The document details the architecture, feature composition, roadmap, and other project-related aspects of Herbicide.
 
 ### Members
 

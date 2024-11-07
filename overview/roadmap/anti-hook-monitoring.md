@@ -1,10 +1,5 @@
 # Anti-hook Monitoring
 
-저희 프로젝트는 Uniswap V4 생태계에서의 보안 강화를 목표로 _Anti-hook Monitoring_ 솔루션을 운영할 예정입니다. 이 솔루션은 Uni Chain 내에 배포된 Pool Manager 컨트랙트를 실시간으로 모니터링하고, Initialize 과정에서 설정되는 Hook의 보안성을 철저히 분석합니다.
+Our project aims to enhance security within the Uniswap V4 ecosystem by operating an Anti-Hook Monitoring solution. This solution will continuously monitor Pool Manager contracts deployed on Uni Chain and rigorously analyze the security of Hooks configured during the initialization process. We comprehensively assess potential risks and vulnerabilities by leveraging dynamic and static analysis methods. Through dynamic analysis, we verify that Hooks function safely across various operational scenarios, while static analysis helps preemptively identify security flaws at the code level.
 
-특히 동적 분석과 정적 분석 방식을 모두 활용하여, 잠재적 위험 요소와 보안 취약점을 다각도로 점검합니다. 동적 분석을 통해서는 Hook이 실제 운영 중 발생할 수 있는 다양한 시나리오에서 안전하게 작동하는지 확인하며, 정적 분석을 통해 코드 레벨에서 보안 취약성을 사전에 식별합니다. 이러한 심층 검토를 통해 보안이 검증된 Hook을 선별하고, 화이트리스트를 구축하여 Uniswap 사용자들이 신뢰할 수 있는 환경을 제공할 계획입니다.
-
-더 나아가, 인증받은 Hook Contract에 한해 SBT를 발급하여, Hook 개발자와 사용자가 신뢰할 수 있는 보안 기준을 제시하고자 합니다. 이러한 SBT 발급은 단순히 보안을 넘어, Uniswap V4와 Uni Chain의 발전에 기여하고자 하는 저희 팀의 의지를 반영합니다. Anti-hook Monitoring을 통해 Uniswap V4의 생태계가 더욱 견고해지고, 안정적인 온보딩을 지원할 수 있도록 하겠습니다.
-
-
-
+With this thorough examination, we intend to build an allowlist of verified Hooks, providing a secure environment that Uniswap users can trust. Furthermore, to offer a recognized security standard for developers and users alike, we plan to issue SBTs exclusively to certified Hook Contracts. This issuance reflects our commitment to security and the broader advancement of Uniswap V4 and Uni Chain. Through Anti-Hook Monitoring, we aim to strengthen the Uniswap V4 ecosystem and support a secure onboarding experience.

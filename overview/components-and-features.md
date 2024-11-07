@@ -1,30 +1,20 @@
 # Components & Features
 
-## Before Use
+## **Before Use**
 
-해당 페이지에서는 Herbicide의 각 구성요소와 테스트에 대한 간단한 설명을 진행합니다.
+This page provides a brief overview of the components and tests within Herbicide. Herbicide requires Uniswap V4’s PoolKey as an input to operate. It is recommended that the Hook Contract be deployed for analysis on the Unichain Sepolia Network (Chain ID: 1301) and initialized with the Uniswap V4 Pool Manager Contract on Unichain Sepolia.
 
-Herbicide는 기본적으로 Uniswap V4의 PoolKey를 입력으로 주어야 동작합니다.
-
-분석을 요구하는 Hook Contract를 Unichain Sepolia Network(Chain ID : 1301)에 배포한 후, Unichain Sepolia의 Uniswap V4 Pool Manager Contract에 Initialize 할 것을 권장합니다.
-
-전체적인 Project에 대한 정적 분석은 [UniChain Blockscout](https://unichain-sepolia.blockscout.com/) Contract가 verify되어 소스코드가 업로드되어야 합니다.
-
-
-
-정적분석은 [Semgrep](https://semgrep.dev)과 [Slither](https://github.com/crytic/slither)를 기반으로, 동적분석은 [Foundry](https://book.getfoundry.sh/) 기반으로 동작합니다.Uniswap V4 Hook에서 발생할 수 있는 위협들은 [Uniswap V4 Hook Securit](../learn-internal-researcher/uniswap-v4-hook-security.md)[y](../learn-internal-researcher/uniswap-v4-hook-security.md)에 기재하였습니다.
-
-
+For comprehensive static analysis, the source code must be verified and uploaded to the [UniChain Blockscout](https://unichain-sepolia.blockscout.com/) Contract. Static analysis is powered by [Semgrep](https://semgrep.dev/) and [Slither](https://github.com/crytic/slither), while dynamic analysis operates on a [Foundry](https://book.getfoundry.sh/)-based framework. Threats that may arise within Uniswap V4 Hooks are detailed in the Uniswap V4 Hook Security documentation.
 
 ## Features
 
 ### Hook Token Delta Simulation
 
-특정 Hook을 사용할 때, `afterSwap / beforeSwap / beforeAddLiquidity / afterAddLiquidity / beforeRemoveLiquidity / afterRemoveLiquidity` 의 로직이 토큰의 이동에 영향을 줄 수 있는 Delta Amount를 추적합니다.&#x20;
+<figure><img src="../.gitbook/assets/master_page_m -O - 6 – 1.png" alt="" width="563"><figcaption></figcaption></figure>
 
-Dynamic Analysis를 통해, swap/modifyLiquidity 시에 실제로 사용자가 낼 토큰의 양과 받을 토큰의 양, 각 실행 주체(Hook Contract, PoolManager, Router)의 자금 이동을 Simulation합니다.&#x20;
+When using specific Hooks, the logic of `afterSwap`, `beforeSwap`, `beforeAddLiquidity`, `afterAddLiquidity`, `beforeRemoveLiquidity`, and `afterRemoveLiquidity` can impact token movements by influencing Delta Amount. Through Dynamic Analysis, we simulate the token amounts users are expected to pay or receive during swap/modifyLiquidity actions, tracking fund movements across each execution entity (Hook Contract, PoolManager, Router).
 
-Simulation 결과로 나온 amountIn과 amountOut을 통해, 특정 Pool을 이용할 때 실제로 낼 토큰과 받을 토큰 양에 대한 Actual Price를 확인할 수 있습니다. 또한, 시중 가격 (Pyth Oracle 활용)을 함께 나타내 사용자에게 편의성을 제공합니다.
+By comparing the simulation results for amountIn and amountOut, users can verify the Actual Price when using a particular Pool. Additionally, this feature enhances user convenience by displaying real-time market prices, sourced through Pyth Oracle, for reference alongside simulation results.
 
 $$actualPrice = amountOut / amountIn$$
 
@@ -32,37 +22,21 @@ $$oraclePrice = (token1/usdc) / (token0/usdc)$$
 
 $$expectedPrice = expectedAmountOut / expectedAmountIn$$
 
-
-
 ### Hook Contract Scanner
 
 Solidity로 작성된 Hook Contract code에 대해, 간단한 위협 탐지 및 정보 추출 기능을 제공합니다.
 
 Hook Contract Scanner는 개발자가 작성한 Hook Contract에 대한 Libraries, Modifiers, require/assert/revert condition, Access Control Logic을 쉽게 파악할 수 있도록 도와줍니다.&#x20;
 
-* &#x20;Modifiers
-
-output
-
-* &#x20;Access Control Logic
-
-output
+<figure><img src="../.gitbook/assets/master_page_m – PF - 6.png" alt="" width="563"><figcaption></figcaption></figure>
 
 
 
-* Double Initializability
-
-output
-
-
-
-* &#x20;If-nested Condition
-
-output
-
-* &#x20;Hook State Variable Information
-
-output
+* Modifiers
+* Access Control Logic
+* re-Initializability
+* If-nested Condition
+* Hook State Variable Information
 
 
 
