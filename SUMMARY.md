@@ -26,13 +26,6 @@
 * [Dynamic Analysis](advanced/dynamic-analysis.md)
 * [Static Analysis](advanced/static-analysis.md)
 
-## Build & Run
+## Learn
 
-* [Installation](build-and-run/installation.md)
-* [Configuration](build-and-run/configuration.md)
-* [Deployment](build-and-run/deployment.md)
-
-## Learn (Internal Researcher)
-
-* [Uniswap v4 Hook Overview](learn-internal-researcher/uniswap-v4-hook-overview.md)
-* [Uniswap v4 Hook Security](learn-internal-researcher/uniswap-v4-hook-security.md)
+* [Uniswap v4 Hook](learn/uniswap-v4-hook.md)
