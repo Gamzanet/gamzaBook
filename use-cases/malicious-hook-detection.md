@@ -180,11 +180,11 @@ contract MaliciousHook is BaseHook {
 
 **Main Logic**
 
-1. Malicious Hook이 사용자가 approve 한 token의 양을 확인합니다.
-2. Malicious Hook은 해당 토큰의 양을 모두 ERC6909로 take 합니다.
-3. 이후 정상적인 Swap/ModifyLiquidity 를 위한 양 만큼 settle 합니다.
+A malicious hook can monitor the amount of tokens a user has approved.
 
-위 과정을 통해, Malicious Hook은 User로부터 Approve한 토큰으로부터 가져올 수 있는 토큰의 최대 양을 모두 훔쳐올 수 있습니다.&#x20;
+1. The malicious hook takes the entire approved token amount through ERC6909.
+2. It then settles only the necessary amount required for a legitimate Swap/ModifyLiquidity.
+3. Through this process, the malicious hook can effectively steal the maximum possible token amount the user has approved for the transaction.
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Exact Out Swap Test</p></figcaption></figure>
 
@@ -194,11 +194,9 @@ The image above illustrates the process in which the Malicious Hook exploits the
 
 ## Herbicide Detection Result
 
-result
-
 ### GasGriefHook
 
-hook은 poolkey의 동작에 매우 민감하게 관여할 수 있습니다. 예를들어, hook에서 `revert`가 수행된다면 해당 풀을 사용할 수 없는 풀이 되어버립니다. 이처럼 사용자의 가용성을 해치는 case는 대표적으로 gas griefing attack이 있습니다. herbicide는 이러한 훅들을 동적 분석 테스팅을 통해 탐지할 수 있습니다.
+Hooks can significantly influence PoolKeys' behavior. For example, if a hook triggers a revert, it could render the associated pool unusable. Such cases, which compromise user accessibility, include attacks like gas griefing. Herbicide addresses these risks by detecting such hooks through dynamic analysis testing.
 
 ```json
 {
@@ -212,6 +210,3 @@ hook은 poolkey의 동작에 매우 민감하게 관여할 수 있습니다. 예
 ```
 
 [Code Details](https://unichain-sepolia.blockscout.com/address/0x3c712B5E5B4a7ee97E4e3F2330bFb435050a4800?tab=contract)
-
-#### Result
-
