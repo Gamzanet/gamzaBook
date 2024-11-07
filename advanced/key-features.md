@@ -2,7 +2,7 @@
 description: What does Herbicide detect?
 ---
 
-# Scope
+# Key Features
 
 ## **Analyzable Hook Condition**
 
@@ -24,7 +24,7 @@ For Hook functions such as `beforeInitialize` / `afterInitialize` / `beforeSwap`
 
 ### Malicious Hook Detection
 
-Can identify risks of gas griefing through gas usage and warns if it can steal user funds or take more tokens than the user intends to pay.
+Can identify risks of gas griefing through gas usage and warns if it can steal user funds or take more tokens than the user intends to pay.&#x20;
 
 ### Price Abnormality
 
@@ -32,18 +32,18 @@ Warns when there is a significant difference between the price simulated by Herb
 
 ### Proxy Detection
 
-Detects and warns if the Hook Contract is implemented as a proxy.
+Detects and warns if the Hook Contract is implemented as a proxy.&#x20;
 
 
 
 ## Contract Information Analysis
 
-#### With PoolKey
+### With PoolKey
 
 1. Hook Delta Simulation: Simulates the amount of funds moved during `Swap/ModifyLiquidity`, allowing users to directly understand the characteristics of the fund flow in the Hook.
 2. Static Analysis with Slither: Provides processed information such as security checks and contract information for Hook Contracts verified on BlockScout using Slither, making audits more convenient.&#x20;
 
-#### With Hook Contract
+### With Hook Contract
 
 1. Static Analysis with Semgrep: Based on the Herbicide Semgrep Script, it extracts and displays information about the Contract as follows.
    1. Library Information

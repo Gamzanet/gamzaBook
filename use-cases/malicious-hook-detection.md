@@ -2,7 +2,9 @@
 
 ## Malicious Hook Example
 
+{% hint style="info" %}
 [https://unichain-sepolia.blockscout.com/address/0xbedD50791A853b4FAf2116AcC9b8df71D525C547?tab=contract](https://unichain-sepolia.blockscout.com/address/0xbedD50791A853b4FAf2116AcC9b8df71D525C547?tab=contract)
+{% endhint %}
 
 ```solidity
 // SPDX-License-Identifier: UNLICENSED
@@ -176,14 +178,12 @@ contract MaliciousHook is BaseHook {
 }
 ```
 
-
-
-**Main Logic**
+### **Main Logic**
 
 A malicious hook can monitor the amount of tokens a user has approved.
 
 1. The malicious hook takes the entire approved token amount through ERC6909.
-2. It then settles only the necessary amount required for a legitimate Swap/ModifyLiquidity.
+2. It then settles only the necessary amount required for a legitimate `Swap/ModifyLiquidity`.
 3. Through this process, the malicious hook can effectively steal the maximum possible token amount the user has approved for the transaction.
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Exact Out Swap Test</p></figcaption></figure>

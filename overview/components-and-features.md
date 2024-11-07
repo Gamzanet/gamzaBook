@@ -24,9 +24,9 @@ $$expectedPrice = expectedAmountOut / expectedAmountIn$$
 
 ### Hook Contract Scanner
 
-Solidity로 작성된 Hook Contract code에 대해, 간단한 위협 탐지 및 정보 추출 기능을 제공합니다.
+Provides simple threat detection and information extraction functions for Hook Contract code written in Solidity.
 
-Hook Contract Scanner는 개발자가 작성한 Hook Contract에 대한 Libraries, Modifiers, require/assert/revert condition, Access Control Logic을 쉽게 파악할 수 있도록 도와줍니다.&#x20;
+The Hook Contract Scanner helps developers easily understand Libraries, Modifiers, require/assert/revert conditions, and Access Control Logic in the Hook Contract.
 
 <figure><img src="../.gitbook/assets/master_page_m – PF - 6.png" alt="" width="563"><figcaption></figcaption></figure>
 

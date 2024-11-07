@@ -10,7 +10,6 @@
 * [Roadmap](overview/roadmap/README.md)
   * [Anti-hook Monitoring](overview/roadmap/anti-hook-monitoring.md)
   * [Advanced Detection using LLM](overview/roadmap/advanced-detection-using-llm.md)
-  * [Page](overview/roadmap/page.md)
 
 ## Quick Start
 
@@ -23,7 +22,7 @@
 
 ## Advanced
 
-* [Scope](advanced/scope.md)
+* [Key Features](advanced/key-features.md)
 * [Dynamic Analysis](advanced/dynamic-analysis.md)
 * [Static Analysis](advanced/static-analysis.md)
 
@@ -37,4 +36,3 @@
 
 * [Uniswap v4 Hook Overview](learn-internal-researcher/uniswap-v4-hook-overview.md)
 * [Uniswap v4 Hook Security](learn-internal-researcher/uniswap-v4-hook-security.md)
-* [Reference : Other Docs](learn-internal-researcher/reference-other-docs.md)
