@@ -94,7 +94,7 @@ This `ArrakisHook` stores information about the pool key in `beforeInitialize` r
 
 [Code Detail](https://unichain-sepolia.blockscout.com/address/0x7Ba42C294124A8037707399823D56b8a589b6080?tab=contract)
 
-해당 훅의 `beforeInitialize`를 살펴봅시다.
+Let's take a look at the `beforeInitialize()`in this hook.
 
 ```javascript
     function beforeInitialize(

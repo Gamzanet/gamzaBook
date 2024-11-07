@@ -48,7 +48,7 @@ When performing a Swap for a Pool using the Hook, the use of the Hook may cause 
 Herbicide can be used to predict such token prices in advance.
 
 * If the predicted price by Herbicide and the Simulated Actual Price differ by more than 5%, a warning is issued.
-* It provides market token price information calculated through Pyth for convenient comparison.
+* It provides market token price information calculated through Pyth Oracle for convenient comparison.
 
 
 
