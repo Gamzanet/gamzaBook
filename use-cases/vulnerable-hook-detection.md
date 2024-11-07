@@ -110,4 +110,6 @@ Let's take a look at the `beforeInitialize()`in this hook.
     }
 ```
 
-해당 컨트랙트는 poolkey에 대한 정보를 `beforeInitialize`에서 초기화 할 수 있도록 구현한 훅입니다. 하지만 해당 훅은, `beforeInitialize`에 대한 어떠한 접근제어도 구현되어있지 않으며, `initialize` 횟수에 대한 별도의 조치를 취하고 있지 않습니다. `beforeInitialize`에서 poolkey를 초기화하므로, 해당 훅에 새로운 initialize가 수행되면, 기존의 hook 자산은 모두 lock 상태에 빠지게 될 것입니다. 이러한 케이스들의 스토리지 값을 감지하여, 사용자가 훅을 안전하게 사용될 수 있도록 합니다.
+This contract is a hook implemented to initialize information about the pool key in `beforeInitialize`. However, this hook does not implement any access control for `beforeInitialize`, nor does it take any measures regarding the number of initializations. Since the pool key is `initialized` in `beforeInitialize`, if a new initialization is performed on this hook, all existing hook assets will be locked.
+
+Herbicide detects the storage values of such cases to ensure that users can use the hook safely.
