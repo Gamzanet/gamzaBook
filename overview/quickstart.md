@@ -18,3 +18,15 @@ Using Hook-applied liquidity, our project analyzes Uniswap V4 to define and addr
 
 Dynamic testing is conducted across N categories with M tests, while static analysis follows with N categories and M tests, ultimately displaying results for the user. Uniswap continues to enhance the Uni Chain and blockchain ecosystem through initiatives like the Infinite Hackathon and Retro Program. We aim to assist Uniswap V4 users and Hook developers in creating safer Hook Contracts.
 
+
+
+## Performance
+
+Our Herbicide platform has identified security issues among various Uniswap v4 hooks detected through our platform. We conducted a direct triage process on each identified issue to verify their validity as vulnerabilities. The following outlines the results of this process.
+
+
+
+{% include "../.gitbook/includes/untitled (1).md" %}
+
+
+

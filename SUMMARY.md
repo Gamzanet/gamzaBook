@@ -10,6 +10,7 @@
 * [Roadmap](overview/roadmap/README.md)
   * [Anti-hook Monitoring](overview/roadmap/anti-hook-monitoring.md)
   * [Advanced Detection using LLM](overview/roadmap/advanced-detection-using-llm.md)
+  * [Page](overview/roadmap/page.md)
 
 ## Quick Start
 

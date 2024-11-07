@@ -4,10 +4,12 @@
 
 ### StopLoss
 
-이 StopLoss 컨트랙트는 Uniswap V4의 **사용자 정의 훅(User Hook)** 기능을 활용하여 **스톱 로스(stop loss)** 기능을 구현한 것입니다. 이 훅은 특정 풀의 가격 변화에 따라 사용자가 설정한 스톱 로스 조건을 만족할 때 자동으로 토큰을 매도하여 손실을 방지합니다. 해당 훅의 기능을 요약하면 다음과 같습니다.
+***
 
-* 사용자는 `placeStopLoss()`함수를 실행하여 스탑 로스 주문을 생성합니다.
-* 스왑 이후 `afterSwap`함수에서 이전 틱과 현재 틱으로 주문을 실행합니다.
+The StopLoss contract leverages Uniswap V4’s custom user hook functionality to implement a stop loss feature. This hook automatically sells tokens when the price in a specified pool meets the user-defined stop-loss conditions, thereby preventing further losses. The functionality of this hook is summarized as follows:
+
+1. Users create a stop-loss order by executing the `placeStopLoss()` function.
+2. After each swap, the `afterSwap` function compares the previous and current ticks, executing the order if the conditions are met.
 
 ```json
 {
@@ -22,7 +24,7 @@
 
 [Code Details](https://unichain-sepolia.blockscout.com/address/0xA3da6f46f93C7B3090A48D7bFeC0345156ED5040?tab=contract)
 
-해당 훅의 `afterSwap` 함수를 살펴봅시다.
+Let's take a look at the `afterSwap` function in this hook.
 
 ```javascript
 
@@ -71,11 +73,13 @@
 
 ```
 
-해당 함수는 `modifier` 뿐만 아니라, 별도의 ACL 장치가 존재하지 않습니다. 또한, 해당 함수를 통해 `fillStopLoss`함수를 별도로 호출할 수 있으며, 스토리지 값을 변화시킬 수 있습니다. 이는 해당 훅의 예기치 않은 동작을 야기할 수 있으며, 적절한 조치가 필요합니다. Herbicide는 이러한 점을 감지하여 사용자에게 위험성을 알려줄 수 있습니다.
+The function lacks a modifier and any additional ACL mechanism. Through this function, the `fillStopLoss()` function can be called separately, allowing storage values to be altered. This may lead to unexpected behavior in the hook, and appropriate measures are necessary. **Herbicide** can detect these risks and alert users accordingly.
 
 ### ArrakisHook
 
-해당 ArrakisHook은 `initialize` 직전에 `beforeInitialize`에서 poolkey에 대한 정보를 저장하고, 이를 통해 ERC1155로 유동성을 관리할 수 있게 구현한 훅입니다.
+***
+
+This `ArrakisHook` stores information about the pool key in `beforeInitialize` right before initialization, enabling it to manage liquidity through ERC1155.
 
 ```json
 {
