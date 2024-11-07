@@ -12,51 +12,41 @@ The analysis is supported for Uniswap V4 Hook Contracts interacting with the Uni
 
 ### ReInitializable
 
-동일한 Hook을 PoolManager에 배포 가능할 경우, `beforeInitialize` / `afterInitialize` 의 동작으로 Hook의 Storage가 변화하는 것을 탐지합니다.&#x20;
-
-Hook Initialize 시, `beforeInitialize`/`afterInitialize` 함수가 접근하는 Storage가 PoolId로 관리되고 있는지 확인합니다.
+Detects changes in the Hook's storage due to the actions of `beforeInitialize / afterInitialize` if the same Hook can be deployed to the `PoolManager`. Confirms whether the storage accessed by the `beforeInitialize/afterInitialize` functions during Hook initialization is managed by PoolId.
 
 ### Time Lock
 
-### 특정 Hook이 특정 시간 경과 후에 작동하지 않는 경우를 탐지합니다.
+Detects cases where a specific Hook does not operate after a certain period has elapsed.
 
 ### External Callable Hook Functions
 
-`beforeInitialize` / `afterInitialize` / `beforeSwap` / `afterSwap` / ... etc. Hook 함수에 대해서, PoolManager 외의 주체가 각 함수 실행이 가능한지 탐지합니다.
+For Hook functions such as `beforeInitialize` / `afterInitialize` / `beforeSwap` / `afterSwap` / `etc.`, detects whether entities other than the PoolManager can execute each function.
 
 ### Malicious Hook Detection
 
-gas griefing의 위험을 gas 사용량을 통해 확인할 수 있고, 사용자의 자금을 빼앗거나, 사용자가 낼 의향이 있는 토큰의 양을 초과하여 가져갈 경우 경고합니다.
+Can identify risks of gas griefing through gas usage and warns if it can steal user funds or take more tokens than the user intends to pay.
 
-#### Price Abnormality
+### Price Abnormality
 
-Herbicide가 Simulation한 Price와 실제 이루어질 Swap에 대한 Price의 차이가 클 경우 경고합니다.
+Warns when there is a significant difference between the price simulated by Herbicide and the actual price at which the swap occurs.
 
-#### Proxy Detection
+### Proxy Detection
 
-Hook Contract가 Proxy로 구현되어있는 경우, 이를 탐지하여 경고합니다.
-
-
+Detects and warns if the Hook Contract is implemented as a proxy.
 
 
 
-## Contract Inforamtion Analysis
+## Contract Information Analysis
 
 #### With PoolKey
 
-1. Hook Delta Simulation : Swap/ModifyLiquidity 시에 이동하는 자금의 양을 Simulation하여 나타내, 사용자가 직접 해당 Hook의 자금 흐름의 특성을 파악할 수 있습니다.
-2. Static Analysis w. Slither : BlockScout에 verify된 Hook Contract에 대해 [Slither](https://github.com/crytic/slither)를 이용해 보안 검사/Contract Information 등, Hook Contract에 대한 가공된 정보를 보여주어 Audit을 편리하게 수행할 수 있습니다.
+1. Hook Delta Simulation: Simulates the amount of funds moved during `Swap/ModifyLiquidity`, allowing users to directly understand the characteristics of the fund flow in the Hook.
+2. Static Analysis with Slither: Provides processed information such as security checks and contract information for Hook Contracts verified on BlockScout using Slither, making audits more convenient.&#x20;
 
 #### With Hook Contract
 
-1. Static Analysis w. Semgrep : Herbicide Semgrep Script을 기반으로, 아래와 같은 Contract의 정보를 추출하여 보여줍니다.
-
-* Library Information
-* Modifier Information
-* Inheritance Information
-* Variable Information
-
-
-
-
-
+1. Static Analysis with Semgrep: Based on the Herbicide Semgrep Script, it extracts and displays information about the Contract as follows.
+   1. Library Information
+   2. Modifier Information
+   3. Inheritance Information
+   4. Variable Information
