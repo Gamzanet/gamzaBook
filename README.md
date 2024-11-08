@@ -24,6 +24,12 @@ Herbicide is a mission-critical developer security platform to code, audit, depl
 
 The document details the architecture, feature composition, roadmap, and other project-related aspects of Herbicide.
 
+
+
+## :construction: Official (DEV)
+
+* (app) [https://herbicide.vercel.app/result](https://herbicide.vercel.app/result)
+
 ### Jump right in
 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Overview</strong></td><td>Introduction</td><td></td><td></td><td><a href="overview/quickstart.md">quickstart.md</a></td></tr><tr><td><strong>Quick Start</strong></td><td>tutorials</td><td></td><td></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td><strong>Use cases</strong></td><td>Malicious | Vulnerable Hook Detection</td><td></td><td></td><td><a href="overview/publish-your-docs.md">publish-your-docs.md</a></td></tr></tbody></table>
