@@ -28,7 +28,7 @@ The document details the architecture, feature composition, roadmap, and other p
 
 ## :construction: Official (DEV)
 
-* (app) [https://herbicide.vercel.app/result](https://herbicide.vercel.app/result)
+* [https://github.com/Gamzanet/Herbicide.git](https://github.com/Gamzanet/Herbicide.git)
 
 ### Jump right in
 
